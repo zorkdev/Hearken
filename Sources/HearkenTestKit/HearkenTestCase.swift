@@ -13,7 +13,7 @@ import Hearken
 /// }
 /// ```
 ///
-/// Use the assert method to check that the tested application makes the correct request:
+/// Use the `assert` method to check that the tested application makes the correct request:
 ///
 /// ```
 /// func testSomething() {
@@ -33,6 +33,11 @@ open class HearkenTestCase: XCTestCase {
     /// failing the test if something goes wrong.
     public let server = Server()
 
+    /// Provides an opportunity to reset state before each test method in a test case is called.
+    ///
+    /// The `setUp()` instance method is called once before each test begins.
+    /// Override this method to reset state for each test method.
+    /// The `Server` is started in this method.
     override open func setUp() {
         super.setUp()
 
@@ -43,6 +48,11 @@ open class HearkenTestCase: XCTestCase {
         }
     }
 
+    /// Provides an opportunity to perform cleanup after each test method in a test case ends.
+    ///
+    /// The `tearDown()` instance method is called once after each test completes.
+    /// Override this method to perform any per-test cleanup.
+    /// The `Server` is stopped in this method.
     override open func tearDown() {
         super.tearDown()
 

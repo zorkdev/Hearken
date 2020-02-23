@@ -1,9 +1,9 @@
 # Hearken
 
-![Version](https://img.shields.io/badge/Version-0.1.0-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-5.1-orange.svg)
 ![SwiftPM](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20macOS%20%7C%20Linux-blue.svg)
+![Documentation](https://github.com/zorkdev/Hearken/docs/badge.svg)
 ![Build](https://github.com/zorkdev/Hearken/workflows/Build/badge.svg)
 
 A simple Swift HTTP/1.1 server built on top of [SwiftNIO](https://github.com/apple/swift-nio).
@@ -91,7 +91,7 @@ class MyTestCase: HearkenTestCase {
 }
 ```
 
-Use the assert method to check that the tested application makes the correct request:
+Use the `assert` method to check that the tested application makes the correct request:
 
 ``` swift
 func testSomething() {
@@ -102,6 +102,10 @@ func testSomething() {
     ...
 }
 ```
+
+## 📖 Documentation
+
+Documentation is available [here](https://zorkdev.github.io/Hearken/).
 
 ## 🛠 Contributions
 

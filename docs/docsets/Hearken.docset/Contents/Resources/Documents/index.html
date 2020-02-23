@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hearken  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Hearken  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Hearken Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/zorkdev/Hearken">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Hearken Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Hearken  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HearkenTestCase.html">HearkenTestCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Server.html">Server</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HTTPHeader.html">HTTPHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HTTPHeader/ContentType.html">– ContentType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/HTTPBody.html">HTTPBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/HTTPHeaders.html">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions.html#/s:8NIOHTTP110HTTPMethodO">HTTPMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/HTTPRoute.html">HTTPRoute</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:7Hearken8HTTPBodya">HTTPBody</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='hearken' class='heading'>Hearken</h1>
+
+<p><img src="https://img.shields.io/badge/Version-0.1.0-blue.svg" alt="Version">
+<img src="https://img.shields.io/badge/Swift-5.1-orange.svg" alt="Swift">
+<img src="https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg" alt="SwiftPM">
+<img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20macOS%20%7C%20Linux-blue.svg" alt="Platforms">
+<img src="https://github.com/zorkdev/Hearken/workflows/Build/badge.svg" alt="Build"></p>
+
+<p>A simple Swift HTTP/1.1 server built on top of <a href="https://github.com/apple/swift-nio">SwiftNIO</a>.</p>
+
+<p>The main goal of this package is to easily create mock servers for your Swift projects, for example when writing UI tests. The API has been kept very minimal as a consequence as Hearken is not intended to be a full-fledged web framework. It comes with a number of convenience APIs to make integration with <code>XCTest</code> even more of a breeze.</p>
+<h2 id='installation' class='heading'>📦 Installation</h2>
+
+<p>Hearken is distributed using the <a href="https://swift.org/package-manager">Swift Package Manager</a>. To install it into a project, add it as a dependency within your <code>Package.swift</code> manifest:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/zorkdev/Hearken.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.1.0"</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre>
+<h2 id='quickstart' class='heading'>🚀 Quickstart</h2>
+
+<p>An instance of Hearken can be easily created by initializing a <code><a href="Classes/Server.html">Server</a></code>:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Hearken</span>
+
+<span class="k">let</span> <span class="nv">server</span> <span class="o">=</span> <span class="kt">Server</span><span class="p">()</span>
+</code></pre>
+
+<p>Simple routes with a response instance can be added by using a custom subscript on <code><a href="Classes/Server.html">Server</a></code>:</p>
+<pre class="highlight swift"><code><span class="n">server</span><span class="p">[</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"/api/health"</span><span class="p">]</span> <span class="o">=</span> <span class="kt">HTTPResponse</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">ok</span><span class="p">)</span>
+</code></pre>
+
+<p>You can also assign closures to routes by using another custom subscript on <code><a href="Classes/Server.html">Server</a></code> if you need more control over your route:</p>
+<pre class="highlight swift"><code><span class="n">server</span><span class="p">[</span><span class="o">.</span><span class="kt">POST</span><span class="p">,</span> <span class="s">"/api/hello"</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="n">request</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">ok</span><span class="p">,</span>
+                 <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nf">contentType</span><span class="p">(</span><span class="o">.</span><span class="n">json</span><span class="p">)],</span>
+                 <span class="nv">body</span><span class="p">:</span> <span class="s">"""
+                       {
+                           "</span><span class="n">hello</span><span class="s">": "</span><span class="n">world</span><span class="s">"
+                       }
+                       """</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The <code><a href="Classes/Server.html">Server</a></code> can be started asynchronously by calling <code>start()</code> and stopped by calling <code>stop()</code>:</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">server</span><span class="o">.</span><span class="nf">start</span><span class="p">()</span>
+<span class="k">try</span> <span class="n">server</span><span class="o">.</span><span class="nf">stop</span><span class="p">()</span>
+</code></pre>
+
+<p>The <code><a href="Classes/Server.html">Server</a></code> can also be started synchronously using <code>syncStart()</code> if you want to block the current thread:</p>
+<pre class="highlight swift"><code><span class="k">try</span> <span class="n">server</span><span class="o">.</span><span class="nf">syncStart</span><span class="p">()</span>
+</code></pre>
+<h2 id='ℹ️-example-usage' class='heading'>ℹ️  Example Usage</h2>
+
+<p>Hearken comes with an example executable product to instantiate a <code><a href="Classes/Server.html">Server</a></code> if you want to quickly check out how it works. Just run <code>HearkenExample</code> after you&rsquo;ve added Hearken as dependency or checked it out separately:</p>
+<pre class="highlight shell"><code>swift run HearkenExample
+</code></pre>
+<h2 id='code-xctest-code-additions' class='heading'>✅ <code>XCTest</code> additions</h2>
+
+<p>Hearken has some added convenience APIs for <code>XCTest</code> in a separate <code>HearkenTestKit</code> library to make it easier to test network requests. If you intend to use this, don&rsquo;t forget to set the domains the tested application calls to <code>localhost:8888</code>.</p>
+
+<p>Create your own subclass of <code><a href="Classes/HearkenTestCase.html">HearkenTestCase</a></code> in your tests:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">HearkenTestKit</span>
+
+<span class="kd">class</span> <span class="kt">MyTestCase</span><span class="p">:</span> <span class="kt">HearkenTestCase</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Use the <code>assert</code> method to check that the tested application makes the correct request:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">testSomething</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">assert</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="kt">POST</span><span class="p">,</span>
+                          <span class="nv">uri</span><span class="p">:</span> <span class="s">"/api/test"</span><span class="p">,</span>
+                          <span class="nv">body</span><span class="p">:</span> <span class="s">"Body"</span><span class="p">,</span>
+           <span class="nv">response</span><span class="p">:</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">ok</span><span class="p">))</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='contributions' class='heading'>🛠 Contributions</h2>
+
+<p>Use <code>develop</code> branch for development and <code>master</code> for release.</p>
+
+<p>To run static analysis and tests on the project, use the <code>test.sh</code> script:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>./test.sh
+</code></pre>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="https://github.com/zorkdev" target="_blank" rel="external">Attila Nemet</a>. All rights reserved. (Last updated: 2020-02-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
