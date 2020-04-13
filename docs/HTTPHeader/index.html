@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearken - Hearken</title>
+    <title>Hearken - HTTPHeader</title>
     <base href="https://zorkdev.github.io/Hearken/"/>
     <style type="text/css">
     :root {
@@ -1198,90 +1198,74 @@ nav li[class] {
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#httpheader.contenttype">content​Type</a></li><li class="case"><a href="#httpheader.contentlength">content​Length</a></li><li class="case"><a href="#httpheader.custom">custom</a></li></ul></li></ol>
         </div>
     </nav>
 
     <main>
         <article>
-                <section id="classes">
-        <h2>Classes</h2>
-        <dl>
-            <dt class="class">
-    <a href="Server" title="class - Server">
-        Server
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> server.</p>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">HTTPHeader</code>
+</h1>
 
-</dd>
-<dt class="class">
-    <a href="HearkenTestCase" title="class - HearkenTestCase">
-        Hearken​Test​Case
-    </a>
-</dt>
-<dd>
-    <p>An <code>XCTestCase</code> subclass that instantiates a <code>Server</code> for each test scenario.</p>
-
-</dd>
-        </dl>
-    </section>
-    <section id="structures">
-        <h2>Structures</h2>
-        <dl>
-            <dt class="structure">
-    <a href="HTTPRequest" title="structure - HTTPRequest">
-        HTTPRequest
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> requests.</p>
-
-</dd>
-<dt class="structure">
-    <a href="HTTPResponse" title="structure - HTTPResponse">
-        HTTPResponse
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> responses.</p>
-
-</dd>
-<dt class="structure">
-    <a href="HTTPRoute" title="structure - HTTPRoute">
-        HTTPRoute
-    </a>
-</dt>
-<dd>
-    <p>A model for <code>HTTP</code> routes.</p>
-
-</dd>
-        </dl>
-    </section>
-    <section id="enumerations">
-        <h2>Enumerations</h2>
-        <dl>
-            <dt class="enumeration">
-    <a href="HTTPHeader" title="enumeration - HTTPHeader">
-        HTTPHeader
-    </a>
-</dt>
-<dd>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">HTTPHeader</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
     <p>An <code>HTTP</code> header.</p>
 
+</div>
+<div class="discussion">
+    <html><body><p>This is a collection of some commonly used headers
+but any header can be created using <code>.custom(name: String, value: String)</code>.</p>
+ </body></html>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="HTTPHeader_ContentType">HTTPHeader.ContentType</a></code></dt>
+<dd><p>Values for the <code>Content-Type</code> <code>HTTP</code> header.</p>
 </dd>
-<dt class="enumeration">
-    <a href="HTTPHeader_ContentType" title="enumeration - HTTPHeader.ContentType">
-        HTTPHeader.​Content​Type
-    </a>
-</dt>
-<dd>
-    <p>Values for the <code>Content-Type</code> <code>HTTP</code> header.</p>
+</dl>
+</section>
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
 
-</dd>
-        </dl>
+        <div role="article" class="enumeration" id="httpheader.contenttype">
+    <h3>
+        <code>content​Type</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">contentType</span>(: <span class="type">ContentType</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p><code>Content-Type</code> <code>HTTP</code> header.</p>
+
+</div>
+</div>
+<div role="article" class="enumeration" id="httpheader.contentlength">
+    <h3>
+        <code>content​Length</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">contentLength</span>(: <span class="type">Int</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p><code>Content-Length</code> <code>HTTP</code> header.</p>
+
+</div>
+</div>
+<div role="article" class="enumeration" id="httpheader.custom">
+    <h3>
+        <code>custom</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">custom</span>(<span class="variable">name</span>: <span class="type">String</span>, <span class="variable">value</span>: <span class="type">String</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Custom <code>HTTP</code> header name and value.</p>
+
+</div>
+</div>
     </section>
+
+
+
         </article>
     </main>
 

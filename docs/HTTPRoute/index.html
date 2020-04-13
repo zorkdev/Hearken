@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearken - Hearken</title>
+    <title>Hearken - HTTPRoute</title>
     <base href="https://zorkdev.github.io/Hearken/"/>
     <style type="text/css">
     :root {
@@ -1198,90 +1198,96 @@ nav li[class] {
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#httproute.init(method:uri:)">init(method:​uri:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#httproute.method">method</a></li><li class="property"><a href="#httproute.uri">uri</a></li></ul></li></ol>
         </div>
     </nav>
 
     <main>
         <article>
-                <section id="classes">
-        <h2>Classes</h2>
-        <dl>
-            <dt class="class">
-    <a href="Server" title="class - Server">
-        Server
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> server.</p>
+            <h1>
+    <small>Structure</small>
+    <code class="name">HTTPRoute</code>
+</h1>
 
-</dd>
-<dt class="class">
-    <a href="HearkenTestCase" title="class - HearkenTestCase">
-        Hearken​Test​Case
-    </a>
-</dt>
-<dd>
-    <p>An <code>XCTestCase</code> subclass that instantiates a <code>Server</code> for each test scenario.</p>
-
-</dd>
-        </dl>
-    </section>
-    <section id="structures">
-        <h2>Structures</h2>
-        <dl>
-            <dt class="structure">
-    <a href="HTTPRequest" title="structure - HTTPRequest">
-        HTTPRequest
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> requests.</p>
-
-</dd>
-<dt class="structure">
-    <a href="HTTPResponse" title="structure - HTTPResponse">
-        HTTPResponse
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> responses.</p>
-
-</dd>
-<dt class="structure">
-    <a href="HTTPRoute" title="structure - HTTPRoute">
-        HTTPRoute
-    </a>
-</dt>
-<dd>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">HTTPRoute</span>: <span class="type">Hashable</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
     <p>A model for <code>HTTP</code> routes.</p>
 
-</dd>
-        </dl>
-    </section>
-    <section id="enumerations">
-        <h2>Enumerations</h2>
-        <dl>
-            <dt class="enumeration">
-    <a href="HTTPHeader" title="enumeration - HTTPHeader">
-        HTTPHeader
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> header.</p>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>Hashable</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
 
-</dd>
-<dt class="enumeration">
-    <a href="HTTPHeader_ContentType" title="enumeration - HTTPHeader.ContentType">
-        HTTPHeader.​Content​Type
-    </a>
-</dt>
-<dd>
-    <p>Values for the <code>Content-Type</code> <code>HTTP</code> header.</p>
+        <div role="article" class="structure" id="httproute.init(method:uri:)">
+    <h3>
+        <code>init(method:​uri:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">method</span>: <span class="type">HTTPMethod</span>, <span class="variable">uri</span>: <span class="type">String</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Creates an instance of <code>HTTPRoute</code>.</p>
 
-</dd>
-        </dl>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>method</th>
+    <td><code class="type">HTTPMethod</code></td></td>
+    <td><p><code>HTTP</code> method eg. <code>POST</code>.</p>
+</td>
+</tr>
+<tr>
+    <th>uri</th>
+    <td><code class="type">String</code></td></td>
+    <td><p><code>HTTP</code> <code>URI</code> eg. <code>/api/test</code>.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
     </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="structure" id="httproute.method">
+    <h3>
+        <code>method</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">method</span>: <span class="type">HTTPMethod</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p><code>HTTP</code> method eg. <code>POST</code>.</p>
+
+</div>
+</div>
+<div role="article" class="structure" id="httproute.uri">
+    <h3>
+        <code>uri</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">uri</span>: <span class="type">String</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p><code>HTTP</code> <code>URI</code> eg. <code>/api/test</code>.</p>
+
+</div>
+</div>
+    </section>
+
+
+
         </article>
     </main>
 

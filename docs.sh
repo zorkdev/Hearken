@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-{
-    sourcekitten doc --spm-module Hearken;
-    echo ',';
-    sourcekitten doc --spm-module HearkenTestKit;
-} > docs.json
-jazzy --sourcekitten-sourcefile docs.json --config .jazzy.yml
-rm docs.json
+rm -R ./docs
+
+swift run swift-doc generate ./Sources \
+    --module-name Hearken \
+    --output ./docs \
+    --format html \
+    --base-url https://zorkdev.github.io/Hearken/

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearken - Hearken</title>
+    <title>Hearken - HTTPResponse</title>
     <base href="https://zorkdev.github.io/Hearken/"/>
     <style type="text/css">
     :root {
@@ -1198,90 +1198,112 @@ nav li[class] {
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#httpresponse.init(status:headers:body:)">init(status:​headers:​body:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#httpresponse.status">status</a></li><li class="property"><a href="#httpresponse.headers">headers</a></li><li class="property"><a href="#httpresponse.body">body</a></li></ul></li></ol>
         </div>
     </nav>
 
     <main>
         <article>
-                <section id="classes">
-        <h2>Classes</h2>
-        <dl>
-            <dt class="class">
-    <a href="Server" title="class - Server">
-        Server
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> server.</p>
+            <h1>
+    <small>Structure</small>
+    <code class="name">HTTPResponse</code>
+</h1>
 
-</dd>
-<dt class="class">
-    <a href="HearkenTestCase" title="class - HearkenTestCase">
-        Hearken​Test​Case
-    </a>
-</dt>
-<dd>
-    <p>An <code>XCTestCase</code> subclass that instantiates a <code>Server</code> for each test scenario.</p>
-
-</dd>
-        </dl>
-    </section>
-    <section id="structures">
-        <h2>Structures</h2>
-        <dl>
-            <dt class="structure">
-    <a href="HTTPRequest" title="structure - HTTPRequest">
-        HTTPRequest
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> requests.</p>
-
-</dd>
-<dt class="structure">
-    <a href="HTTPResponse" title="structure - HTTPResponse">
-        HTTPResponse
-    </a>
-</dt>
-<dd>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">HTTPResponse</span>: <span class="type">Equatable</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
     <p>A simplified model for <code>HTTP</code> responses.</p>
 
-</dd>
-<dt class="structure">
-    <a href="HTTPRoute" title="structure - HTTPRoute">
-        HTTPRoute
-    </a>
-</dt>
-<dd>
-    <p>A model for <code>HTTP</code> routes.</p>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>Equatable</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
 
-</dd>
-        </dl>
+        <div role="article" class="structure" id="httpresponse.init(status:headers:body:)">
+    <h3>
+        <code>init(status:​headers:​body:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">status</span>: <span class="type">HTTPResponseStatus</span>, <span class="variable">headers</span>: <span class="type">HTTPHeaders</span> = [], <span class="variable">body</span>: <a href="HTTPBody"><span class="type">HTTPBody</span></a>? = <span class="keyword">nil</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Creates an instance of <code>HTTPResponse</code>.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>status</th>
+    <td><code class="type">HTTPResponse​Status</code></td></td>
+    <td><p><code>HTTP</code> response status eg. <code>200 OK</code>.</p>
+</td>
+</tr>
+<tr>
+    <th>headers</th>
+    <td><code class="type">HTTPHeaders</code></td></td>
+    <td><p><code>HTTP</code> response headers eg. <code>Content-Type: application/json</code>. Defaults to empty.</p>
+</td>
+</tr>
+<tr>
+    <th>body</th>
+    <td><code class="type">HTTPBody?</code></td></td>
+    <td><p><code>HTTP</code> response body. Defaults to <code>nil</code>.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
     </section>
-    <section id="enumerations">
-        <h2>Enumerations</h2>
-        <dl>
-            <dt class="enumeration">
-    <a href="HTTPHeader" title="enumeration - HTTPHeader">
-        HTTPHeader
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> header.</p>
+    <section id="properties">
+        <h2>Properties</h2>
 
-</dd>
-<dt class="enumeration">
-    <a href="HTTPHeader_ContentType" title="enumeration - HTTPHeader.ContentType">
-        HTTPHeader.​Content​Type
-    </a>
-</dt>
-<dd>
-    <p>Values for the <code>Content-Type</code> <code>HTTP</code> header.</p>
+        <div role="article" class="structure" id="httpresponse.status">
+    <h3>
+        <code>status</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">status</span>: <span class="type">HTTPResponseStatus</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p><code>HTTP</code> response status eg. <code>200 OK</code>.</p>
 
-</dd>
-        </dl>
+</div>
+</div>
+<div role="article" class="structure" id="httpresponse.headers">
+    <h3>
+        <code>headers</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">headers</span>: <span class="type">HTTPHeaders</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p><code>HTTP</code> response headers eg. <code>Content-Type: application/json</code>.</p>
+
+</div>
+</div>
+<div role="article" class="structure" id="httpresponse.body">
+    <h3>
+        <code>body</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">body</span>: <a href="HTTPBody"><span class="type">HTTPBody</span></a>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p><code>HTTP</code> response body.</p>
+
+</div>
+</div>
     </section>
+
+
+
         </article>
     </main>
 

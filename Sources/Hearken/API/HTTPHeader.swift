@@ -53,6 +53,9 @@ extension HTTPHeaders {
 }
 
 extension HTTPHeaders: ExpressibleByArrayLiteral {
+    /// Creates an instance initialized with the given elements.
+    ///
+    /// - Parameter elements: The elements of the new instance.
     public init(arrayLiteral elements: HTTPHeader...) {
         self.init(elements.map { $0.rawValue })
     }

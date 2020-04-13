@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearken - Hearken</title>
+    <title>Hearken - HTTPBody</title>
     <base href="https://zorkdev.github.io/Hearken/"/>
     <style type="text/css">
     :root {
@@ -1198,90 +1198,29 @@ nav li[class] {
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li></ol>
+            <ol/>
         </div>
     </nav>
 
     <main>
         <article>
-                <section id="classes">
-        <h2>Classes</h2>
-        <dl>
-            <dt class="class">
-    <a href="Server" title="class - Server">
-        Server
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> server.</p>
+            <h1>
+    <small>Typealias</small>
+    <span class="name">HTTPBody</span>
+</h1>
 
-</dd>
-<dt class="class">
-    <a href="HearkenTestCase" title="class - HearkenTestCase">
-        Hearken​Test​Case
-    </a>
-</dt>
-<dd>
-    <p>An <code>XCTestCase</code> subclass that instantiates a <code>Server</code> for each test scenario.</p>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">HTTPBody</span> = <span class="type">Data</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The body of <code>HTTP</code> requests.</p>
 
-</dd>
-        </dl>
-    </section>
-    <section id="structures">
-        <h2>Structures</h2>
-        <dl>
-            <dt class="structure">
-    <a href="HTTPRequest" title="structure - HTTPRequest">
-        HTTPRequest
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> requests.</p>
-
-</dd>
-<dt class="structure">
-    <a href="HTTPResponse" title="structure - HTTPResponse">
-        HTTPResponse
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> responses.</p>
-
-</dd>
-<dt class="structure">
-    <a href="HTTPRoute" title="structure - HTTPRoute">
-        HTTPRoute
-    </a>
-</dt>
-<dd>
-    <p>A model for <code>HTTP</code> routes.</p>
-
-</dd>
-        </dl>
-    </section>
-    <section id="enumerations">
-        <h2>Enumerations</h2>
-        <dl>
-            <dt class="enumeration">
-    <a href="HTTPHeader" title="enumeration - HTTPHeader">
-        HTTPHeader
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> header.</p>
-
-</dd>
-<dt class="enumeration">
-    <a href="HTTPHeader_ContentType" title="enumeration - HTTPHeader.ContentType">
-        HTTPHeader.​Content​Type
-    </a>
-</dt>
-<dd>
-    <p>Values for the <code>Content-Type</code> <code>HTTP</code> header.</p>
-
-</dd>
-        </dl>
-    </section>
+</div>
+<div class="discussion">
+    <html><body><p>Conforms to <code>ExpressibleByStringLiteral</code> so
+the following is also a valid way to initialize it:</p>
+ </body></html>
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">body</span>: <span class="type">HTTPBody</span> = <span class="string literal">"</span><span class="string literal">Body content</span><span class="string literal">"</span>
+</code></pre></body></html>
+</div>
         </article>
     </main>
 

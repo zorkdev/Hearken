@@ -14,6 +14,9 @@ extension HTTPBody {
 }
 
 extension HTTPBody: ExpressibleByStringLiteral {
+    /// Creates an instance initialized to the given string value.
+    ///
+    /// - Parameter value: The value of the new instance.
     public init(stringLiteral value: String) {
         self.init(value.utf8)
     }

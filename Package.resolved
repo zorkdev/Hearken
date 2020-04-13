@@ -11,21 +11,39 @@
         }
       },
       {
-        "package": "CwlCatchException",
-        "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
+        "package": "CommonMark",
+        "repositoryURL": "https://github.com/SwiftDocOrg/CommonMark.git",
         "state": {
-          "branch": null,
-          "revision": "7cd2f8cacc4d22f21bc0b2309c3b18acf7957b66",
-          "version": "1.2.0"
+          "branch": "master",
+          "revision": "1903d99dc9429a29a7933767c7790db175121fec",
+          "version": null
         }
       },
       {
-        "package": "CwlPreconditionTesting",
-        "repositoryURL": "https://github.com/mattgallagher/CwlPreconditionTesting.git",
+        "package": "GraphViz",
+        "repositoryURL": "https://github.com/SwiftDocOrg/GraphViz.git",
         "state": {
           "branch": null,
-          "revision": "c228db5d2ad1b01ebc84435e823e6cca4e3db98b",
-          "version": "1.2.0"
+          "revision": "03405c13dc1c31f50c08bbec6e7587cbee1c7fb3",
+          "version": null
+        }
+      },
+      {
+        "package": "HypertextLiteral",
+        "repositoryURL": "https://github.com/NSHipster/HypertextLiteral.git",
+        "state": {
+          "branch": null,
+          "revision": "3e45da849e507d171c7264146176bb834a01be4f",
+          "version": "0.0.2"
+        }
+      },
+      {
+        "package": "Markup",
+        "repositoryURL": "https://github.com/SwiftDocOrg/Markup.git",
+        "state": {
+          "branch": null,
+          "revision": "029ad8c1115ab32b7c20ab52eb092fbc030deb17",
+          "version": "0.0.4"
         }
       },
       {
@@ -33,8 +51,8 @@
         "repositoryURL": "https://github.com/Quick/Nimble.git",
         "state": {
           "branch": null,
-          "revision": "b02b00b30b6353632aa4a5fb6124f8147f7140c0",
-          "version": "8.0.5"
+          "revision": "7fd118ec8795888bcbbebc1a41f6984454c4cd6f",
+          "version": "8.0.7"
         }
       },
       {
@@ -56,12 +74,75 @@
         }
       },
       {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
+        "state": {
+          "branch": null,
+          "revision": "8d31a0905c346a45c87773ad50862b5b3df8dff6",
+          "version": "0.0.4"
+        }
+      },
+      {
+        "package": "cmark",
+        "repositoryURL": "https://github.com/SwiftDocOrg/swift-cmark.git",
+        "state": {
+          "branch": null,
+          "revision": "1168665f6b36be747ffe6b7b90bc54cfc17f42b7",
+          "version": "0.28.3+20200207.1168665"
+        }
+      },
+      {
+        "package": "swift-doc",
+        "repositoryURL": "https://github.com/SwiftDocOrg/swift-doc.git",
+        "state": {
+          "branch": "master",
+          "revision": "c757fff36c9bc78475d90cd44268490b09844a27",
+          "version": null
+        }
+      },
+      {
+        "package": "HTMLEntities",
+        "repositoryURL": "https://github.com/IBM-Swift/swift-html-entities.git",
+        "state": {
+          "branch": null,
+          "revision": "744c094976355aa96ca61b9b60ef0a38e979feb7",
+          "version": "3.0.14"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "74d7b91ceebc85daf387ebb206003f78813f71aa",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "LoggingGitHubActions",
+        "repositoryURL": "https://github.com/NSHipster/swift-log-github-actions.git",
+        "state": {
+          "branch": null,
+          "revision": "13ce1e95e5b0c5fffa7667214d42e1f316693ef5",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "swift-nio",
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "16ab4d657e1ad4e77bd5f8b94af8538561643053",
-          "version": "2.14.0"
+          "revision": "e876fb37410e0036b98b5361bb18e6854739572b",
+          "version": "2.16.0"
+        }
+      },
+      {
+        "package": "SwiftSyntax",
+        "repositoryURL": "https://github.com/apple/swift-syntax.git",
+        "state": {
+          "branch": "0.50200.0",
+          "revision": "0688b9cfc4c3dd234e4f55f1f056b2affc849873",
+          "version": null
         }
       },
       {
@@ -69,8 +150,35 @@
         "repositoryURL": "https://github.com/realm/SwiftLint.git",
         "state": {
           "branch": null,
-          "revision": "8f22943ca1340a95e5aeb5513b62a9f0766c0f74",
-          "version": "0.39.1"
+          "revision": "b1c72069cafa6cdebfb9274806cd976c54d8dde5",
+          "version": "0.39.2"
+        }
+      },
+      {
+        "package": "SwiftMarkup",
+        "repositoryURL": "https://github.com/SwiftDocOrg/SwiftMarkup.git",
+        "state": {
+          "branch": null,
+          "revision": "431f418ae1833a312646e934a2891e778c1b03b0",
+          "version": "0.0.5"
+        }
+      },
+      {
+        "package": "SwiftSemantics",
+        "repositoryURL": "https://github.com/SwiftDocOrg/SwiftSemantics.git",
+        "state": {
+          "branch": null,
+          "revision": "4fdc48bddbbb8311079ed111e5a4f2b92423b05c",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "SwiftSyntaxHighlighter",
+        "repositoryURL": "https://github.com/NSHipster/SwiftSyntaxHighlighter.git",
+        "state": {
+          "branch": "1.0.0",
+          "revision": "4a20d10bba17241b66650d99081801536146b43c",
+          "version": null
         }
       },
       {

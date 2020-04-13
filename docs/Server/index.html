@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearken - Hearken</title>
+    <title>Hearken - Server</title>
     <base href="https://zorkdev.github.io/Hearken/"/>
     <style type="text/css">
     :root {
@@ -1198,90 +1198,141 @@ nav li[class] {
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li></ol>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#server.init(port:isloggingenabled:)">init(port:​is​Logging​Enabled:​)</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="method"><a href="#server.start()">start()</a></li><li class="method"><a href="#server.syncstart()">sync​Start()</a></li><li class="method"><a href="#server.stop()">stop()</a></li></ul></li></ol>
         </div>
     </nav>
 
     <main>
         <article>
-                <section id="classes">
-        <h2>Classes</h2>
-        <dl>
-            <dt class="class">
-    <a href="Server" title="class - Server">
-        Server
-    </a>
-</dt>
-<dd>
+            <h1>
+    <small>Class</small>
+    <code class="name">Server</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Server</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
     <p>An <code>HTTP</code> server.</p>
 
-</dd>
-<dt class="class">
-    <a href="HearkenTestCase" title="class - HearkenTestCase">
-        Hearken​Test​Case
-    </a>
-</dt>
-<dd>
-    <p>An <code>XCTestCase</code> subclass that instantiates a <code>Server</code> for each test scenario.</p>
+</div>
+<div class="discussion">
+    <html><body><p>An instance of <code>Hearken</code> can be easily created by initializing a <code>Server</code>:</p>
+ </body></html>
+<html><body><pre class="highlight"><code><span class="keyword">import</span> <span class="variable">Hearken</span>
 
-</dd>
-        </dl>
+<span class="keyword">let</span> <span class="variable">server</span> = <span class="variable">Server</span>()
+</code></pre></body></html>
+<html><body><p>Simple routes with a response instance can be added
+by using a custom subscript on <code>Server</code>:</p>
+ </body></html>
+<html><body><pre class="highlight"><code><span class="variable">server</span>[.<span class="variable">GET</span>, <span class="string literal">"</span><span class="string literal">/api/health</span><span class="string literal">"</span>] = <span class="variable">HTTPResponse</span>(<span class="variable">status</span>: .<span class="variable">ok</span>)
+</code></pre></body></html>
+<html><body><p>You can also assign closures to routes by using another
+custom subscript on <code>Server</code> if you need more control over your route:</p>
+ </body></html>
+<html><body><pre class="highlight"><code><span class="variable">server</span>[.<span class="variable">POST</span>, <span class="string literal">"</span><span class="string literal">/api/hello</span><span class="string literal">"</span>] = { <span class="variable">request</span> <span class="keyword">in</span>
+    <span class="variable">print</span>(<span class="variable">request</span>)
+
+    <span class="keyword">return</span> .<span class="variable">init</span>(<span class="variable">status</span>: .<span class="variable">ok</span>,
+                 <span class="variable">headers</span>: [.<span class="variable">contentType</span>(.<span class="variable">json</span>)],
+                 <span class="variable">body</span>: <span class="string literal">"""</span><span class="string literal">
+                       {
+                           "hello": "world"
+                       }
+                       </span><span class="string literal">"""</span>)
+}
+</code></pre></body></html>
+<html><body><p>The <code>Server</code> can be started asynchronously by calling <code>start()</code> and stopped by calling <code>stop()</code>:</p>
+ </body></html>
+<html><body><pre class="highlight"><code><span class="keyword">try</span> <span class="variable">server</span>.<span class="type">start</span>()
+<span class="keyword">try</span> <span class="variable">server</span>.<span class="type">stop</span>()
+</code></pre></body></html>
+<html><body><p>The <code>Server</code> can also be started synchronously using <code>syncStart()</code>
+if you want to block the current thread:</p>
+ </body></html>
+<html><body><pre class="highlight"><code><span class="keyword">try</span> <span class="variable">server</span>.<span class="type">syncStart</span>()
+</code></pre></body></html>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="class" id="server.init(port:isloggingenabled:)">
+    <h3>
+        <code>init(port:​is​Logging​Enabled:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">port</span>: <span class="type">Int</span> = <span class="number literal">8888</span>, <span class="variable">isLoggingEnabled</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Creates an instance of an <code>HTTP</code> <code>Server</code>.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>port</th>
+    <td><code class="type">Int</code></td></td>
+    <td><p>The port to bind to. Defaults to <code>8888</code>.</p>
+</td>
+</tr>
+<tr>
+    <th>is​Logging​Enabled</th>
+    <td><code class="type">Bool</code></td></td>
+    <td><p>Enables logging to <code>stdout</code>. Defaults to <code>false</code>.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
     </section>
-    <section id="structures">
-        <h2>Structures</h2>
-        <dl>
-            <dt class="structure">
-    <a href="HTTPRequest" title="structure - HTTPRequest">
-        HTTPRequest
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> requests.</p>
+    <section id="methods">
+        <h2>Methods</h2>
 
-</dd>
-<dt class="structure">
-    <a href="HTTPResponse" title="structure - HTTPResponse">
-        HTTPResponse
-    </a>
-</dt>
-<dd>
-    <p>A simplified model for <code>HTTP</code> responses.</p>
+        <div role="article" class="class" id="server.start()">
+    <h3>
+        <code>start()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">start</span>() <span class="keyword">throws</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Starts the <code>Server</code> asynchronously.</p>
 
-</dd>
-<dt class="structure">
-    <a href="HTTPRoute" title="structure - HTTPRoute">
-        HTTPRoute
-    </a>
-</dt>
-<dd>
-    <p>A model for <code>HTTP</code> routes.</p>
+</div>
+</div>
+<div role="article" class="class" id="server.syncstart()">
+    <h3>
+        <code>sync​Start()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">syncStart</span>() <span class="keyword">throws</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Starts the <code>Server</code> synchronously.</p>
 
-</dd>
-        </dl>
+</div>
+<div class="discussion">
+    <html><body><p>Use this if you want to block the current thread.</p>
+ </body></html>
+</div>
+</div>
+<div role="article" class="class" id="server.stop()">
+    <h3>
+        <code>stop()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">stop</span>() <span class="keyword">throws</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Stops the server and closes all connections gracefully.</p>
+
+</div>
+</div>
     </section>
-    <section id="enumerations">
-        <h2>Enumerations</h2>
-        <dl>
-            <dt class="enumeration">
-    <a href="HTTPHeader" title="enumeration - HTTPHeader">
-        HTTPHeader
-    </a>
-</dt>
-<dd>
-    <p>An <code>HTTP</code> header.</p>
 
-</dd>
-<dt class="enumeration">
-    <a href="HTTPHeader_ContentType" title="enumeration - HTTPHeader.ContentType">
-        HTTPHeader.​Content​Type
-    </a>
-</dt>
-<dd>
-    <p>Values for the <code>Content-Type</code> <code>HTTP</code> header.</p>
 
-</dd>
-        </dl>
-    </section>
+
         </article>
     </main>
 
