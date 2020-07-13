@@ -14,8 +14,8 @@
         "package": "CommonMark",
         "repositoryURL": "https://github.com/SwiftDocOrg/CommonMark.git",
         "state": {
-          "branch": "master",
-          "revision": "1903d99dc9429a29a7933767c7790db175121fec",
+          "branch": null,
+          "revision": "902cc82abc2e8ad23b73c982eed27c63ae3d9384",
           "version": null
         }
       },
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/Quick/Nimble.git",
         "state": {
           "branch": null,
-          "revision": "7fd118ec8795888bcbbebc1a41f6984454c4cd6f",
-          "version": "8.0.7"
+          "revision": "2b1809051b4a65c1d7f5233331daa24572cd7fca",
+          "version": "8.1.1"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/Quick/Quick.git",
         "state": {
           "branch": null,
-          "revision": "33682c2f6230c60614861dfc61df267e11a1602f",
-          "version": "2.2.0"
+          "revision": "09b3becb37cb2163919a3842a4c5fa6ec7130792",
+          "version": "2.2.1"
         }
       },
       {
@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
         "state": {
           "branch": null,
-          "revision": "8d31a0905c346a45c87773ad50862b5b3df8dff6",
-          "version": "0.0.4"
+          "revision": "223d62adc52d51669ae2ee19bdb8b7d9fd6fcd9c",
+          "version": "0.0.6"
         }
       },
       {
@@ -96,7 +96,7 @@
         "repositoryURL": "https://github.com/SwiftDocOrg/swift-doc.git",
         "state": {
           "branch": "master",
-          "revision": "c757fff36c9bc78475d90cd44268490b09844a27",
+          "revision": "d75fad6b3698cb8b9112177b37325e791fb67c21",
           "version": null
         }
       },
@@ -132,8 +132,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "e876fb37410e0036b98b5361bb18e6854739572b",
-          "version": "2.16.0"
+          "revision": "8a865bd15e69526cbdfcfd7c47698eb20b2ba951",
+          "version": "2.19.0"
         }
       },
       {
@@ -158,9 +158,9 @@
         "package": "SwiftMarkup",
         "repositoryURL": "https://github.com/SwiftDocOrg/SwiftMarkup.git",
         "state": {
-          "branch": null,
-          "revision": "431f418ae1833a312646e934a2891e778c1b03b0",
-          "version": "0.0.5"
+          "branch": "0.2.0",
+          "revision": "f395f3bd9e345402cc744aa9051780ed403d3b26",
+          "version": null
         }
       },
       {

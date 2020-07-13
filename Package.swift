@@ -9,7 +9,7 @@ let package = Package(
         .executable(name: "HearkenExample", targets: ["HearkenExample"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-nio.git", from: "2.16.0"),
+        .package(url: "https://github.com/apple/swift-nio.git", from: "2.19.0"),
         .package(url: "https://github.com/realm/SwiftLint.git", from: "0.39.2"),
         .package(url: "https://github.com/SwiftDocOrg/swift-doc.git", .branch("master"))
     ],
