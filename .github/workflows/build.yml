@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Select Xcode version
-      run: sudo xcode-select -switch /Applications/Xcode_11.4.app
+      run: sudo xcode-select -switch /Applications/Xcode_12.5.app
     - name: Test
       run: ./test.sh
 
@@ -19,4 +19,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Test
-      run: swift test --enable-test-discovery
+      run: swift test

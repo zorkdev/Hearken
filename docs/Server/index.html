@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#server.init(port:logger:)">init(port:​logger:​)</a></li><li class="initializer"><a href="#server.init(port:isloggingenabled:)">init(port:​is​Logging​Enabled:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#server.group">group</a></li><li class="property"><a href="#server.router">router</a></li><li class="property"><a href="#server.logger">logger</a></li><li class="property"><a href="#server.requesthandler">request​Handler</a></li><li class="property"><a href="#server.host">host</a></li><li class="property"><a href="#server.port">port</a></li><li class="property"><a href="#server.isrunning">is​Running</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="method"><a href="#server.start()">start()</a></li><li class="method"><a href="#server.syncstart()">sync​Start()</a></li><li class="method"><a href="#server.stop()">stop()</a></li><li class="method"><a href="#server.startchannel()">start​Channel()</a></li></ul></li></ol>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#server.init(port:isloggingenabled:)">init(port:​is​Logging​Enabled:​)</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#server.start()">start()</a></li><li class="function"><a href="#server.syncstart()">sync​Start()</a></li><li class="function"><a href="#server.stop()">stop()</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -37,7 +37,9 @@
     <code class="name">Server</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Server</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Server</span> </code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>An <code>HTTP</code> server.</p>
 
@@ -71,30 +73,26 @@ custom subscript on <code>Server</code> if you need more control over your route
 </code></pre></body></html>
 <p>The <code>Server</code> can be started asynchronously by calling <code>start()</code> and stopped by calling <code>stop()</code>:</p>
 
-<html><body><pre class="highlight"><code><span class="keyword">try</span> <span class="variable">server</span>.<span class="type">start</span>()
-<span class="keyword">try</span> <span class="variable">server</span>.<span class="type">stop</span>()
+<html><body><pre class="highlight"><code><span class="keyword">try</span> <span class="variable">server</span>.<span class="variable">start</span>()
+<span class="keyword">try</span> <span class="variable">server</span>.<span class="variable">stop</span>()
 </code></pre></body></html>
 <p>The <code>Server</code> can also be started synchronously using <code>syncStart()</code>
 if you want to block the current thread:</p>
 
-<html><body><pre class="highlight"><code><span class="keyword">try</span> <span class="variable">server</span>.<span class="type">syncStart</span>()
+<html><body><pre class="highlight"><code><span class="keyword">try</span> <span class="variable">server</span>.<span class="variable">syncStart</span>()
 </code></pre></body></html>
 </div>
 
     <section id="initializers">
         <h2>Initializers</h2>
 
-        <div role="article" class="initializer" id="server.init(port:logger:)">
-    <h3>
-        <code>init(port:​logger:​)</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">init</span>(<span class="variable">port</span>: <span class="type">Int</span>, <span class="variable">logger</span>: <a href="https://zorkdev.github.io/Hearken/LoggerType"><span class="type">LoggerType</span></a>)</code></pre></body></html>
-</div>
-<div role="article" class="initializer" id="server.init(port:isloggingenabled:)">
+        <div role="article" class="initializer" id="server.init(port:isloggingenabled:)">
     <h3>
         <code>init(port:​is​Logging​Enabled:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">port</span>: <span class="type">Int</span> = <span class="number literal">8888</span>, <span class="variable">isLoggingEnabled</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">port</span>: <span class="type">Int</span> = <span class="number literal">8888</span>, <span class="variable">isLoggingEnabled</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) </code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Creates an instance of an <code>HTTP</code> <code>Server</code>.</p>
 
@@ -112,68 +110,18 @@ if you want to block the current thread:</p>
   <tbody>
     <tr>
     <th>port</th>
-    <td><code class="type">Int</code></td></td>
-    <td><ul>
-<li>port: The port to bind to. Defaults to <code>8888</code>.</li>
-</ul>
+    <td><code class="type">Int</code></td>
+    <td><p>The port to bind to. Defaults to <code>8888</code>.</p>
 </td>
 </tr>
 <tr>
     <th>is​Logging​Enabled</th>
-    <td><code class="type">Bool</code></td></td>
-    <td><ul>
-<li>isLoggingEnabled: Enables logging to <code>stdout</code>. Defaults to <code>false</code>.</li>
-</ul>
+    <td><code class="type">Bool</code></td>
+    <td><p>Enables logging to <code>stdout</code>. Defaults to <code>false</code>.</p>
 </td>
 </tr>
   </tbody>
 </table>
-</div>
-    </section>
-    <section id="properties">
-        <h2>Properties</h2>
-
-        <div role="article" class="variable" id="server.group">
-    <h3>
-        <code>group</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">group</span></code></pre></body></html>
-</div>
-<div role="article" class="variable" id="server.router">
-    <h3>
-        <code>router</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">router</span></code></pre></body></html>
-</div>
-<div role="article" class="variable" id="server.logger">
-    <h3>
-        <code>logger</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">logger</span>: <a href="https://zorkdev.github.io/Hearken/LoggerType"><span class="type">LoggerType</span></a></code></pre></body></html>
-</div>
-<div role="article" class="variable" id="server.requesthandler">
-    <h3>
-        <code>request​Handler</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">requestHandler</span>: <a href="https://zorkdev.github.io/Hearken/RequestHandler"><span class="type">RequestHandler</span></a></code></pre></body></html>
-</div>
-<div role="article" class="variable" id="server.host">
-    <h3>
-        <code>host</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">host</span></code></pre></body></html>
-</div>
-<div role="article" class="variable" id="server.port">
-    <h3>
-        <code>port</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">port</span>: <span class="type">Int</span></code></pre></body></html>
-</div>
-<div role="article" class="variable" id="server.isrunning">
-    <h3>
-        <code>is​Running</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isRunning</span></code></pre></body></html>
 </div>
     </section>
     <section id="methods">
@@ -183,7 +131,9 @@ if you want to block the current thread:</p>
     <h3>
         <code>start()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">start</span>() <span class="keyword">throws</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">start</span>() <span class="keyword">throws</span> </code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Starts the <code>Server</code> asynchronously.</p>
 
@@ -193,7 +143,9 @@ if you want to block the current thread:</p>
     <h3>
         <code>sync​Start()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">syncStart</span>() <span class="keyword">throws</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">syncStart</span>() <span class="keyword">throws</span> </code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Starts the <code>Server</code> synchronously.</p>
 
@@ -207,17 +159,13 @@ if you want to block the current thread:</p>
     <h3>
         <code>stop()</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">stop</span>() <span class="keyword">throws</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">stop</span>() <span class="keyword">throws</span> </code></pre>
+</div>
 <div class="summary" role="doc-abstract">
     <p>Stops the server and closes all connections gracefully.</p>
 
 </div>
-</div>
-<div role="article" class="function" id="server.startchannel()">
-    <h3>
-        <code>start​Channel()</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">func</span> <span class="function">startChannel</span>() <span class="keyword">throws</span> -&gt; <span class="type">Channel</span></code></pre></body></html>
 </div>
     </section>
 
@@ -228,7 +176,7 @@ if you want to block the current thread:</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-07-13T17:55:27+0100">13 July 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+    Generated on <time datetime="2021-05-10T12:06:40+0100">10 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

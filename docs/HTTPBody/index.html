@@ -26,35 +26,57 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol/>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#httpbody.init(stringliteral:)">init(string​Literal:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
     <main>
         <article>
             <h1>
-    <small>Typealias</small>
-    <span class="name">HTTPBody</span>
+    <small>Extensions on</small>
+    <code class="name">HTTPBody</code>
 </h1>
+    <section id="initializers">
+        <h2>Initializers</h2>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">HTTPBody</span> = <span class="type">Data</span></code></pre></body></html>
+        <div role="article" class="initializer" id="httpbody.init(stringliteral:)">
+    <h3>
+        <code>init(string​Literal:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">stringLiteral</span> <span class="variable">value</span>: <span class="type">String</span>) </code></pre>
+</div>
 <div class="summary" role="doc-abstract">
-    <p>The body of <code>HTTP</code> requests.</p>
+    <p>Creates an instance initialized to the given string value.</p>
 
 </div>
-<div class="discussion">
-    <p>Conforms to <code>ExpressibleByStringLiteral</code> so
-the following is also a valid way to initialize it:</p>
+<h4>Parameters</h4>
 
-<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">body</span>: <span class="type">HTTPBody</span> = <span class="string literal">"</span><span class="string literal">Body content</span><span class="string literal">"</span>
-</code></pre></body></html>
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>value</th>
+    <td><code class="type">String</code></td>
+    <td><p>The value of the new instance.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
+    </section>
         </article>
     </main>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-07-13T17:55:27+0100">13 July 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+    Generated on <time datetime="2021-05-10T12:06:40+0100">10 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

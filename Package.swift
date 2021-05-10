@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.4
 import PackageDescription
 
 let package = Package(
@@ -9,8 +9,8 @@ let package = Package(
         .executable(name: "HearkenExample", targets: ["HearkenExample"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-nio.git", from: "2.19.0"),
-        .package(url: "https://github.com/realm/SwiftLint.git", from: "0.39.2"),
+        .package(url: "https://github.com/apple/swift-nio.git", from: "2.29.0"),
+        .package(url: "https://github.com/realm/SwiftLint.git", from: "0.43.1"),
         .package(url: "https://github.com/SwiftDocOrg/swift-doc.git", .branch("master"))
     ],
     targets: [
@@ -18,7 +18,7 @@ let package = Package(
             .product(name: "NIOHTTP1", package: "swift-nio")
         ]),
         .target(name: "HearkenTestKit", dependencies: ["Hearken"]),
-        .target(name: "HearkenExample", dependencies: ["Hearken"]),
+        .executableTarget(name: "HearkenExample", dependencies: ["Hearken"]),
         .testTarget(name: "HearkenTests", dependencies: ["Hearken"]),
         .testTarget(name: "HearkenTestKitTests", dependencies: ["HearkenTestKit"])
     ]
